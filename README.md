@@ -1,10 +1,10 @@
-# AzureFunction-CarImageAPI
+ # AzureFunction-CarImageAPI
 A simple Azure Function App that acts as an API that can be called to get images of cars from Blob Storage based on vehicle numberplate &amp; image angle parameters (and optionally width and height parameters for image resizing).
 
 ## Getting started
 All you need to get started with this Function app is the following:
 
-1. Create a Storage Account in Azure and add a Blob container for each car - with the naming scheme of the reg numbers as the container names (for example, "AB24 ABC").
+1. Create a Storage Account in Azure and add a Blob container for each car - with the naming scheme of the reg numbers as the container names (for example, "AB24ABC").
 2. In each of these containers, add some images of cvarious angles of the car. These images must be in .jpg format (but you can change this in the Function code if needed), and should follow similar naming schemes to "front", "rear", "left-side", "right-side" etc.
 3. Once you've created these containers and added the images, grab the Storage Account Name and Key from the Access Keys tab in the Storage account blade
 4. Open up the Solution in Visual Studio, and open the GetCarImage.cs file
