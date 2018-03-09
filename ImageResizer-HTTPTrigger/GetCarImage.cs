@@ -12,7 +12,7 @@ using System.Drawing.Drawing2D;
 using System.Drawing.Imaging;
 using System.IO;
 
-namespace ImageResizerLookers
+namespace CarImageAPI
 {
     public static class GetCarImage
     {
@@ -43,8 +43,8 @@ namespace ImageResizerLookers
 
             //Set up link to blob storage for stored car images (for production code, consider moving this SAS token to KeyVault to abstract credentials away from code level)
             string storageConnectionString = "DefaultEndpointsProtocol=https;"
-                + "AccountName=griffsdemostorage"
-                + ";AccountKey=DAgPWhnyATkvklwlxN2tzbvE1RCnlUP5uB5Mp0S2up6FLsn662CID6pkNJ3Axp61FP+MiFt8CFAYmKNTovv4Xw=="
+                + "AccountName=YOUR-ACCOUNT-NAME"//<<< Add your account name here
+                + ";AccountKey=YOUR-ACCOUNT-KEY"//<<< Add your account key here
                 + ";EndpointSuffix=core.windows.net";
             CloudStorageAccount blobAccount = CloudStorageAccount.Parse(storageConnectionString);
             CloudBlobClient blobClient = blobAccount.CreateCloudBlobClient();
